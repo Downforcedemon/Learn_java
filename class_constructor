@@ -1,0 +1,25 @@
+public class Store {
+
+  // Constructor
+  public Store() {
+    System.out.println("I am inside the constructor method."); 
+  }
+
+  // Overriding the toString() method
+  @Override
+  public String toString() {
+    return "This is a Store object!";
+  }
+
+  // main method
+  public static void main(String[] args) {
+    System.out.println("Start of the main method.");
+
+    // Create the instance
+    Store lemonadeStand = new Store(); 
+
+    // Print the instance
+    System.out.println(lemonadeStand); // This will now print "This is a Store object!"
+  }
+}
+
