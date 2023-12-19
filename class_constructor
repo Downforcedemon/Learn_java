@@ -1,14 +1,20 @@
 public class Store {
 
+  String productType; 
+  int inventoryCount;
+  double inventoryPrice;
+
   // Constructor
-  public Store() {
-    System.out.println("I am inside the constructor method."); 
+  public Store(String product, int count, double price) {
+    productType = product;
+    inventoryCount = count;
+    inventoryPrice = price;
   }
 
   // Overriding the toString() method
   @Override
   public String toString() {
-    return "This is a Store object!";
+    return "Store selling " + productType + " with inventory count: " + inventoryCount + " and price: " + inventoryPrice;
   }
 
   // main method
@@ -16,10 +22,17 @@ public class Store {
     System.out.println("Start of the main method.");
 
     // Create the instance
-    Store lemonadeStand = new Store(); 
+    Store cookieShop = new Store("cookies", 12, 2.50); // Example arguments
+    System.out.println(cookieShop);
 
-    // Print the instance
-    System.out.println(lemonadeStand); // This will now print "This is a Store object!"
-  }
+    System.out.println("End of the main method."); 
+  } 
 }
+
+// pseudocode for the above
+// A. Define the Store Class with some attributes
+// B. declare instance variables such productType, inventoryCount
+// C. define constructor with parameters such as product, count with types
+// D. override
+// E. main method --> print message --> create instance(create store object with parameters) --> print details of the store (cookieshop) 
 
